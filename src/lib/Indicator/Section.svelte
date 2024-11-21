@@ -1,8 +1,12 @@
 <script lang="ts">
     import Dot from './Dot.svelte'
 
-    export let sections: Array<string>
-    export let activeSection: number
+    interface Props {
+        sections: Array<string>;
+        activeSection: number;
+    }
+
+    let { sections, activeSection = $bindable() }: Props = $props();
 </script>
 
 <div class="svelte-fp-section-indicator">

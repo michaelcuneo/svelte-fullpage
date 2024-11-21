@@ -1,8 +1,12 @@
 <script lang="ts">
     import Dot from './Dot.svelte'
 
-    export let slides: Array<string>
-    export let activeSlide: number
+    interface Props {
+        slides: Array<string>;
+        activeSlide: number;
+    }
+
+    let { slides, activeSlide }: Props = $props();
 </script>
 
 <div class="svelte-fp-slide-indicator">
